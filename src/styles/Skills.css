@@ -1,0 +1,155 @@
+/* Consistent sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Skills section */
+.skills-container {
+  width: 100%;
+  min-width: 0;
+  padding: 5vh;
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cards */
+.skill-card {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 2rem;
+  text-align: left;
+  background-color: var(--background);
+  border: 1px solid var(--para-color);
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px rgb(112, 111, 111);
+  transition: 0.5s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  background-color: var(--skill-hover-bg);
+  border-color: var(--skill-hover-border);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Python card spans both desktop columns */
+#python-card {
+  grid-column: 1 / -1;
+}
+
+/* Card headings */
+.skill-title {
+  font-size: 2rem;
+  color: white;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  color: white;
+  font-size: 3.5rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Info items */
+.skill-info-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.skill-info-container div {
+  margin: 0;
+  max-width: 100%;
+  background-color: rgba(39, 39, 41, 0.8);
+  border-radius: 10px;
+  border: 1px solid rgba(80, 80, 80, 0.5);
+  padding: 0.4rem 0.8rem;
+  color: var(--text-light);
+  overflow-wrap: anywhere;
+  transition: all var(--transition-speed) ease;
+}
+
+.skill-info-container div:hover {
+  background-color: rgba(151, 106, 190, 0.2);
+  border-color: rgba(125, 45, 194, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(125, 45, 194, 0.2);
+}
+
+/* Skill bubbles */
+.skill-bubble-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+  margin-top: 1.5rem;
+}
+
+.skill-bubble-container div {
+  margin: 0;
+  max-width: 100%;
+  background-color: rgba(30, 30, 35, 0.8);
+  border-radius: 10px;
+  border: 1px solid rgba(80, 80, 80, 0.5);
+  padding: 0.4rem 0.8rem;
+  color: var(--text-light);
+  overflow-wrap: anywhere;
+  transition: all var(--transition-speed) ease;
+}
+
+.skill-bubble-container div:hover {
+  background-color: rgba(125, 45, 194, 0.2);
+  border-color: rgba(125, 45, 194, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(125, 45, 194, 0.2);
+}
+
+/* Tablet and mobile */
+@media (max-width: 700px) {
+  .skills-container {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  #python-card {
+    grid-column: auto;
+  }
+
+  .skill-card {
+    padding: 1.25rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+  }
+
+  .skill-title {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .skills-container {
+    padding: 1rem;
+  }
+
+  .skill-card {
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skills-container {
+    padding: 25vh;
+  }
+}

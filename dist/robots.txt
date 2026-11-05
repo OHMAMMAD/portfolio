@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ohmammad.github.io/sitemap.xml

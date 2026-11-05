@@ -1,0 +1,35 @@
+.name-title {
+  color: rgba(255, 255, 255, 0.64);
+}
+.text {
+  font-size: 1.3rem;
+  margin-top: 2vh;
+}
+.title {
+  color: white;
+  font-size: 3rem;
+}
+.about-me-header {
+  padding: 10vh;
+}
+
+@media (max-width: 700px) {
+  .about-me-header {
+    padding: 3vh;
+    margin-top: 4vh;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .about-me-header {
+    padding: 35vh;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .text {
+    font-size: 1.7rem;
+  }
+}

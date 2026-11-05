@@ -1,0 +1,122 @@
+.projects-container {
+  text-align: center;
+  padding: 5vh;
+}
+.projects-card-container {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card {
+  text-align: left;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-speed) ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(125, 45, 194, 0.8);
+  box-shadow: 0 10px 30px rgba(125, 45, 194, 0.2);
+}
+
+.project-card-text {
+  margin-top: 0.8rem;
+}
+.project-card-text p {
+  margin-top: 1rem;
+}
+.project-card-text h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.project-image {
+  width: 100%;
+}
+
+#telo-image {
+  width: 50%;
+}
+
+.project-info-bubble-container {
+  margin-top: 1rem;
+}
+
+.project-info-bubble-container div {
+  display: inline-block;
+  margin: 0.2rem;
+  max-width: 100%;
+  background-color: rgba(30, 30, 35, 0.8);
+  border-radius: 10px;
+  border: 1px solid rgba(80, 80, 80, 0.5);
+  padding: 0.4rem 0.8rem;
+  color: var(--text-light);
+  overflow-wrap: anywhere;
+  transition: all var(--transition-speed) ease;
+}
+
+.project-info-bubble-container div:hover {
+  background-color: rgba(125, 45, 194, 0.2);
+  border-color: rgba(125, 45, 194, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(125, 45, 194, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .projects-card-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .project-card {
+    padding: 1.2rem;
+  }
+  
+  .project-card-text h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .projects-card-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .projects-container {
+    padding: 25vh;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 3vh 1rem;
+  }
+  
+  .project-card {
+    padding: 1rem;
+  }
+  
+  .project-card-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .project-info-bubble-container div {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.1rem;
+  }
+}
